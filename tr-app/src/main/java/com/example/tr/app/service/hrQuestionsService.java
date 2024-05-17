@@ -5,6 +5,8 @@ import com.example.tr.app.repository.hrQuestionsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class hrQuestionsService {
 private final hrQuestionsRepository questionsRepository;
@@ -16,5 +18,9 @@ public hrQuestionsService(hrQuestionsRepository questionsRepository) {
 public hrQuestions sendQuestions(hrQuestions hrQuestions) {
     return questionsRepository.save(hrQuestions);
 
+}
+public List<hrQuestions> getAllQuestions() {
+    List<hrQuestions> questions = questionsRepository.findAll();
+    return questions;
 }
 }
