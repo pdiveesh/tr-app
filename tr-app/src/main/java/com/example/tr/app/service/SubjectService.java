@@ -1,7 +1,6 @@
 package com.example.tr.app.service;
 
 import com.example.tr.app.model.Subject;
-import com.example.tr.app.model.hrQuestions;
 import com.example.tr.app.repository.SubjectRepo;
 import org.springframework.stereotype.Service;
 
@@ -14,13 +13,12 @@ public class SubjectService {
     public SubjectService(SubjectRepo repo) {
         this.repo = repo;
     }
+
     public List<Subject> getDetails() {
-        List<Subject> details = repo.findAll();
-        return details;
+        return repo.findAll();
     }
 
-    public void postDetails(Subject Subject){
-        repo.insert(Subject);
-
+    public void postDetails(Subject subject) {
+        repo.save(subject);
     }
 }

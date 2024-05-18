@@ -4,18 +4,24 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Subjectdetails")
 public class Subject {
-    private String Name,logo;
+    private String name;
+    private String logo;
 
-    public String getLogo() {
+    // Getter and Setter for name
+    public String getname() {
+        return name;
+    }
+
+    public void setname(String name) {
+        this.name = name;
+    }
+
+    // Getter and Setter for logo
+    public String getlogo() {
         return logo;
     }
-    public void setLogo(String Logo){
-        this.logo=logo;
-    }
-    public String getName(){
-        return Name;
-    }
-    public void setName(String Name){
-        this.Name=Name;
+
+    public void setlogo(String logo) {
+        this.logo = logo;
     }
 }
