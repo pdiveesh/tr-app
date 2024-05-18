@@ -15,12 +15,12 @@ public class Subjectcontroller {
         this.service = service;
     }
     @GetMapping
-    Collection<Subject> getDetails(@PathVariable Subject Subjectdetails ){
+    Collection<Subject> getDetails(@PathVariable Subject SubjectData){
             return service.getDetails();
         }
         @PostMapping
-        public void postDetails(@RequestBody Subject SubjectDetails){
-            service.postDetails(SubjectDetails);
+        public void postDetails(@RequestBody Subject SubjectData){
+            service.postDetails(SubjectData);
 
         }
 }
