@@ -19,8 +19,8 @@ public class SubjectService {
         return details;
     }
 
-    public void postDetails(Subject SubjectData){
-        repo.insert(SubjectData);
+    public void postDetails(Subject Subject){
+        repo.insert(Subject);
 
     }
 }
