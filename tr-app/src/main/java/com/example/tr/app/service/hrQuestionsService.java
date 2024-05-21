@@ -23,4 +23,8 @@ public List<hrQuestions> getAllQuestions() {
     List<hrQuestions> questions = questionsRepository.findAll();
     return questions;
 }
+public List<hrQuestions> findAll() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+}
 }

@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/hrQuestions")
-@CrossOrigin(origins = "http://localhost:5173")  // Add this line
+@CrossOrigin(origins = {"http://localhost:8081","http://localhost:3000"})
 public class hrQuestionsController {
     private final hrQuestionsService hrQuestionService;
 
@@ -25,9 +25,11 @@ public class hrQuestionsController {
         hrQuestions savedQuestion = hrQuestionService.sendQuestions(hrQuestions);
         return new ResponseEntity<>(savedQuestion, HttpStatus.CREATED);
     }
+
     @GetMapping("/getHrQuestions")
     public ResponseEntity<List<hrQuestions>> getHrQuestions() {
-        List<hrQuestions> questions= hrQuestionService.getAllQuestions();
+        List<hrQuestions> questions = hrQuestionService.getAllQuestions();
         return new ResponseEntity<>(questions, HttpStatus.OK);
     }
 }
+
