@@ -1,27 +1,39 @@
 package com.example.tr.app.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "Subjectdetails")
+@Document(collection = "subjects")
 public class Subject {
-    private String name;
-    private String logo;
+    @Id
+    private String id;
+    private String subjectName;
+    private byte[] subjectIcon;
 
-    // Getter and Setter for name
-    public String getname() {
-        return name;
+    // Getters and setters
+    // Constructor(s), if needed
+
+    public String getId() {
+        return id;
     }
 
-    public void setname(String name) {
-        this.name = name;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    // Getter and Setter for logo
-    public String getlogo() {
-        return logo;
+    public String getSubjectName() {
+        return subjectName;
     }
 
-    public void setlogo(String logo) {
-        this.logo = logo;
+    public void setSubjectName(String subjectName) {
+        this.subjectName = subjectName;
+    }
+
+    public byte[] getSubjectIcon() {
+        return subjectIcon;
+    }
+
+    public void setSubjectIcon(byte[] subjectIcon) {
+        this.subjectIcon = subjectIcon;
     }
 }
