@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 @RestController
-@CrossOrigin(origins = {"http://localhost:8080", "http://localhost:5173"})
+@CrossOrigin(origins = "*")
 @RequestMapping("/trquestions")
 public class Trcontroller {
     private final Trservice Service;
